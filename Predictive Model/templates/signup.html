@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+Sign Up
+{% endblock %}
+
+{% block content %}
+<br><br><br><br>
+
+  <form>
+    <h1 class="h3 mb-3 fw-normal">New User Registration Sign Up</h1>
+
+    <div class="col-4">
+ 	<label for="floatingInput">User Name</label>
+      <input type="email" class="form-control" id="floatingInput" placeholder="user name">
+     
+    </div>
+    <div class="col-4">
+      <label for="floatingPassword">Password For User</label>
+      <input type="password" class="form-control" id="floatingPassword" placeholder="User Password">
+    </div>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+  <div>
+<button type="submit" class="btn btn-primary btn-block btn-large">Sing Up</button>
+  </div>
+  </form>
+{% endblock %}

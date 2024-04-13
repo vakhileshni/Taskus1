@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block head %}
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+{% block title %}Predictive model{% endblock %}
+</head>
+{% endblock %}
+<body>	
+
+{% block header %}
+<br><br><br>
+<h1>Predict AHT and Accuarcy</h1>
+{% endblock %}
+{% block content %}
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+	<div class="block">
+	<label for="fname">Select Employee Gender:</label>
+	<select name="gender" id="gender">
+  	<option value="Male">Male</option>
+  	<option value="Female">Female</option>
+	</select>
+	</div>
+	<br>
+	<div class="block">
+	<label for="fname">Select Employee Highest Education:</label>
+	<select name="education" id="education">
+	<option value="Master">Master</option>
+  	<option value="Bachelor">Bachelor</option>
+	<option value="Diploma">Diploma</option>
+  	<option value="Intermediate">Intermediate</option>
+	</select>
+	</div>
+	<br><br>
+	<div class="block">
+	<label for="fname">Enter Employee Age:</label>
+	<input type="text" name="age" placeholder="age" required="required" /><br><br>
+	</div>
+	<div class="block">
+	<label for="fname">Enter Employee Assessment:</label>
+	<input type="text" name="assesment" placeholder="assessment" required="required" /><br><br>
+	</div>
+	<div class="block">
+	<label for="fname">Enter Week In DMR:</label>
+	<input type="text" name="DMR" placeholder="week in dmr" required="required" /><br><br>
+	</div>
+	<div class="block">
+	<label for="fname">Enter Weeks To Graduate:</label>
+        <input type="text" name="graduate" placeholder="weeks to graduate" required="required" /><br><br>
+	</div>
+	<div class="block">
+	<label for="fname">First Month Accuracy Hitting Goal:</label>
+	<input type="text" name="goal" placeholder="Accuracy hitting goal" required="required" /><br><br>
+	</div>
+	<div class="block">
+	<label for="fname">Speed To Prof:</label>
+        <input type="text" name="prof" placeholder="speed to prof" required="required" /><br><br>
+	</div>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   {{AHT}} <br>{{Accuary}}
+
+ </div>
+
+
+</body>
+</html>
+{% endblock %}
+

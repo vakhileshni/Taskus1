@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="text-center text-dark mt-5">Login Form</h2>
+        <div class="text-center mb-5 text-dark">Made for the taskus users</div>
+        <div class="card my-5">
+          <form class="card-body cardbody-color p-lg-5" method="POST" action="/login">
+            <div class="text-center">
+              <img src="https://3f76gfovood4w2dx1h25w8ei-wpengine.netdna-ssl.com/wp-content/themes/yootheme/cache/Home-Events-Grid-2e8ec4fe.jpeg" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                width="200px" alt="profile">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="username" name='username' aria-describedby="emailHelp" placeholder="User Name" required="required">
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" id="password" name='password' placeholder="password" required="required">
+            </div>
+            <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100">Login</button></div>
+            <div id="emailHelp" class="form-text text-center mb-5 text-dark">To get your login username and password please contact @lhen.lardizabal@taskus.com
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/js/bootstrap.min.js'></script>
+</body>
+</html>
